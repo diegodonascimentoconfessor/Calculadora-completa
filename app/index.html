@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="../assets/stlye.css">
+    <script defer src="../js/calcular.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora</h1>
+        <div id="display" class="display"></div>
+        <form>
+            <input type="text" id="input" placeholder=""><br><br>
+            <button type="button" onclick="adicionarNumero(1)">1</button>
+            <button type="button" onclick="adicionarNumero(2)">2</button>
+            <button type="button" onclick="adicionarNumero(3)">3</button>
+            <button type="button" onclick="definirOperacao('+')">+</button><br>
+            <button type="button" onclick="adicionarNumero(4)">4</button>
+            <button type="button" onclick="adicionarNumero(5)">5</button>
+            <button type="button" onclick="adicionarNumero(6)">6</button>
+            <button type="button" onclick="definirOperacao('-')">-</button><br>
+            <button type="button" onclick="adicionarNumero(7)">7</button>
+            <button type="button" onclick="adicionarNumero(8)">8</button>
+            <button type="button" onclick="adicionarNumero(9)">9</button>
+            <button type="button" onclick="definirOperacao('*')">*</button><br>
+            <button type="button" onclick="adicionarNumero(0)">0</button>
+            <button type="button" onclick="definirOperacao('/')">/</button>
+            <button type="button" onclick="calcularResultado()">=</button>
+            <button type="button" onclick="limparDisplay()">C</button>
+        </form>
+    </div>
+</body>
+</html>
+

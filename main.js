@@ -113,8 +113,8 @@ const Template = [
 //criar janela sobre 
 const janelasobre =() =>{
     const  sobre  = new  BrowserWindow({
-    width:320,
-    height:220,
+    width:800,
+    height:800,
      resizable: false,
      autoHideMenuBar: true,
    

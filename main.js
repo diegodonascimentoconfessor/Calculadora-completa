@@ -7,15 +7,13 @@ app.on ('ready', () =>{
         height:800,
         //autoHideMenuBar: true,
         resizable:false,
-        icon: 'app/assets/ calculadora'
+        icon:'assets/icone_calculadora.png'
     })
     Menu.setApplicationMenu(Menu.buildFromTemplate(Template))
    mainwindow.loadFile('app/index.html')
 
 }) ;
 
-
-// criando Template Menu 
 const Template = [
     {
 
@@ -100,7 +98,7 @@ const Template = [
          {
                    
               label:'Documentação',
-              click: () => shell.openExternal('https://drive.google.com/file/d/1JdxSrm3DXi28mVcbwlqBd3of0x2AAzUW/view?usp=sharing')
+              click: () => shell.openExternal('https://drive.google.com/file/d/1u07Wab9hcF0b5jXqxZaQ3nZQm9OLjFj0/view?usp=sharing')
 
 
 

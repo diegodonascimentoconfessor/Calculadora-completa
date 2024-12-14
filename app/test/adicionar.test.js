@@ -1,27 +1,34 @@
+const adicionar = require('../../js/adicionar');
 
-global.document = {
-  getElementById: jest.fn().mockReturnValue({
-      value: ''
-  })
-};
-
-// Função a ser testada
-function adicionarNumero(numero) {
-  document.getElementById("input").value += numero;
-}
-
-// Teste para adicionar números
-describe('Função adicionarNumero', () => {
-
+describe('adicionarNumero', () => {
   beforeEach(() => {
-      // Resetando a simulação do DOM antes de cada teste
-      document.getElementById("input").value = '';
+    document.body.innerHTML = '<input id="input" value="" />';
   });
 
-  test('deve adicionar números corretamente', () => {
-      adicionarNumero('5');
-      expect(document.getElementById("input").value).toBe('5');
-      adicionarNumero('3');
-      expect(document.getElementById("input").value).toBe('53');
+  it('deve adicionar o número ao valor atual do input', () => {
+    const input = document.getElementById('input');
+    input.value = '123';
+
+    adicionar.adicionarNumero('4');
+
+    expect(input.value).toBe('1234');
+  });
+
+  it('deve adicionar múltiplos números ao valor atual do input', () => {
+    const input = document.getElementById('input');
+    input.value = '';
+
+    adicionar.adicionarNumero('5');
+    adicionar.adicionarNumero('6');
+
+    expect(input.value).toBe('56');
+  });
+
+  it('deve funcionar corretamente com um input vazio', () => {
+    const input = document.getElementById('input');
+
+    adicionar.adicionarNumero('7');
+
+    expect(input.value).toBe('7');
   });
 });

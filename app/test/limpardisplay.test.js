@@ -1,41 +1,24 @@
-// limparDisplay.test.js
+// calculadora.test.js
+const { limparDisplay } = require('../../js/limpardisplay');
 
-// Função de mock para simular o comportamento do DOM
-global.document = {
-    getElementById: jest.fn().mockReturnValue({
-        value: ''
-    })
-};
+test('limpa as variáveis e o campo de entrada', () => {
+    // Mock do DOM
+    document.body.innerHTML = '<input id="input" value="10" />'; // Simula o campo de entrada
 
-// Funções a serem testadas
-let operacao = "";
-let valor1 = "";
-let valor2 = "";
+    // Simulando valores antes de chamar a função
+    let valor1 = "10";
+    let valor2 = "5";
+    let operacao = "+";
 
-function limparDisplay() {
-    document.getElementById("input").value = "";
-    valor1 = "";
-    valor2 = "";
-    operacao = "";
-}
+    // Chamando a função limparDisplay
+    const resultado = limparDisplay();
 
-// Teste para limpar o display
-describe('Função limparDisplay', () => {
+    // Verificando se as variáveis foram limpas
+    expect(resultado.valor1).toBe("");
+    expect(resultado.valor2).toBe("");
+    expect(resultado.operacao).toBe("");
 
-    beforeEach(() => {
-        // Resetando a simulação do DOM antes de cada teste
-        document.getElementById("input").value = '';
-        valor1 = "";
-        valor2 = "";
-        operacao = "";
-    });
-
-    test('deve limpar o display corretamente', () => {
-        document.getElementById("input").value = '5';
-        limparDisplay();
-        expect(document.getElementById("input").value).toBe('');
-        expect(valor1).toBe('');
-        expect(valor2).toBe('');
-        expect(operacao).toBe('');
-    });
+    // Verificando se o campo de entrada foi limpo
+    const input = document.getElementById("input");
+    expect(input.value).toBe(""); // O valor do input deve ser uma string vazia
 });

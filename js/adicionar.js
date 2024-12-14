@@ -1,6 +1,6 @@
-// Arquivo adicionar.js (ou adicionarNumero.js)
-export function adicionarNumero(numero) {
-    const input = document.getElementById('input');
-    input.value += numero;
-  }
-  
+function adicionarNumero(numero) {
+  const input = document.getElementById('input');
+  input.value += numero;
+}
+
+module.exports = { adicionarNumero };

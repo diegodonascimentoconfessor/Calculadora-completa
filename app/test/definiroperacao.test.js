@@ -1,37 +1,25 @@
-// definirOperacao.test.js
+// operacao.test.js
+const { definirOperacao } = require('../../js/definiroperacao');
 
-// Função de mock para simular o comportamento do DOM
-global.document = {
-    getElementById: jest.fn().mockReturnValue({
-        value: ''
-    })
-};
+test('define a operação e o valor corretamente', () => {
+    // Dados de entrada simulados
+    const valorDeEntrada = "10";
+    const operacao = "+";
 
-// Função a ser testada
-let operacao = "";
-let valor1 = "";
+    // Chama a função com valores simulados
+    const resultado = definirOperacao(operacao, valorDeEntrada);
 
-function definirOperacao(op) {
-    valor1 = document.getElementById("input").value;
-    operacao = op;
-    document.getElementById("input").value = "";
-}
+    // Verificações
+    expect(resultado.valor1).toBe(valorDeEntrada);
+    expect(resultado.operacao).toBe(operacao);
+});
 
-// Teste para definir a operação
-describe('Função definirOperacao', () => {
+test('retorna valores corretos para operação de subtração', () => {
+    const valorDeEntrada = "5";
+    const operacao = "-";
 
-    beforeEach(() => {
-        // Resetando a simulação do DOM antes de cada teste
-        document.getElementById("input").value = '';
-        valor1 = "";
-        operacao = "";
-    });
+    const resultado = definirOperacao(operacao, valorDeEntrada);
 
-    test('deve definir operação corretamente', () => {
-        document.getElementById("input").value = '5';
-        definirOperacao('+');
-        expect(valor1).toBe('5');
-        expect(operacao).toBe('+');
-        expect(document.getElementById("input").value).toBe('');
-    });
+    expect(resultado.valor1).toBe(valorDeEntrada);
+    expect(resultado.operacao).toBe(operacao);
 });

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1734273751479" clover="3.2.0">
-  <project timestamp="1734273751479" name="All files">
+<coverage generated="1734279492362" clover="3.2.0">
+  <project timestamp="1734279492362" name="All files">
     <metrics statements="54" coveredstatements="53" conditionals="12" coveredconditionals="12" methods="8" coveredmethods="7" elements="74" coveredelements="72" complexity="0" loc="54" ncloc="54" packages="1" files="5" classes="5"/>
     <file name="adicionar.js" path="C:\Users\User\Desktop\Calculadora-completa\js\adicionar.js">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>

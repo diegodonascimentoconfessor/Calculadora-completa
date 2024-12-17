@@ -19,15 +19,15 @@ FN:9,definirOperacao
 FN:15,calcularResultado
 FN:37,limparDisplay
 FNF:4
-FNH:3
-FNDA:0,adicionarNumero
+FNH:4
+FNDA:2,adicionarNumero
 FNDA:6,definirOperacao
 FNDA:5,calcularResultado
 FNDA:1,limparDisplay
 DA:1,1
 DA:2,1
 DA:3,1
-DA:6,0
+DA:6,2
 DA:10,6
 DA:11,6
 DA:12,6
@@ -49,7 +49,7 @@ DA:40,1
 DA:41,1
 DA:44,1
 LF:24
-LH:23
+LH:24
 BRDA:18,0,0,1
 BRDA:18,0,1,1
 BRDA:18,0,2,1

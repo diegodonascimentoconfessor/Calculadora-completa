@@ -1,4 +1,4 @@
-const { definirOperacao, calcularResultado, limparDisplay } = require("../../js/calcular");
+const { definirOperacao, calcularResultado, limparDisplay, adicionarNumero } = require("../../js/calcular");
 
 describe("Calculadora", () => {
   beforeEach(() => {
@@ -88,6 +88,26 @@ describe("Calculadora", () => {
       limparDisplay();
 
       expect(input.value).toBe(""); // Display deve estar limpo
+    });
+  });
+
+  describe("adicionarNumero", () => {
+    it("deve adicionar um número ao valor existente no display", () => {
+      const input = document.getElementById("input");
+      input.value = "123";
+
+      adicionarNumero("4");
+
+      expect(input.value).toBe("1234"); // Número deve ser concatenado
+    });
+
+    it("deve adicionar o número no display vazio", () => {
+      const input = document.getElementById("input");
+      input.value = "";
+
+      adicionarNumero("5");
+
+      expect(input.value).toBe("5"); // Deve adicionar o número ao display vazio
     });
   });
 });

@@ -41,4 +41,4 @@ function limparDisplay() {
     operacao = "";
 }
 
-module.exports = { adicionarNumero, definirOperacao, calcularResultado, limparDisplay };
+module.exports = { adicionarNumero, definirOperacao, calcularResultado, limparDisplay};
